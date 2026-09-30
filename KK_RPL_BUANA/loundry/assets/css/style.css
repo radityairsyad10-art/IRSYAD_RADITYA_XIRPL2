@@ -1,0 +1,887 @@
+/* =========================================================
+   LAUNDRY KITA - PASTEL STYLE
+   Palette:
+   #D1E9F6 - Blue Pastel
+   #F6EACB - Cream
+   #F1D3CE - Peach
+   #EECAD5 - Pink
+   ========================================================= */
+
+
+/* =========================
+   GLOBAL
+   ========================= */
+
+:root {
+    --yellow: #e2e073;
+    --cream: #F6EACB;
+    --pink: #f321d0;
+    --blue: #e6e6e6;
+
+    --blue-dark: #7fcaf0;
+    --peach-dark: #5ce057;
+    --pink-dark: #a4b2f1;
+
+    --text: #5A5552;
+    --dark: #3F3B3A;
+    --white: #FFFFFF;
+    --light: #FFFDF9;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Segoe UI", Arial, sans-serif;
+    color: var(--text);
+    background: var(--light);
+    line-height: 1.7;
+}
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+section {
+    scroll-margin-top: 80px;
+}
+
+
+/* =========================
+   NAVBAR
+   ========================= */
+
+.navbar {
+    background: rgba(255, 255, 255, 0.96) !important;
+    padding: 15px 0;
+    border-bottom: 1px solid rgba(90, 85, 82, 0.08);
+    box-shadow: 0 3px 15px rgba(90, 85, 82, 0.06);
+}
+
+.navbar-brand {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--dark) !important;
+    letter-spacing: 0.5px;
+}
+
+.navbar-brand:hover {
+    color: var(--peach-dark) !important;
+}
+
+.navbar .nav-link {
+    color: var(--text) !important;
+    font-size: 15px;
+    font-weight: 500;
+    margin: 0 6px;
+    padding: 8px 12px !important;
+    border-radius: 10px;
+    transition: 0.3s ease;
+}
+
+.navbar .nav-link:hover {
+    background: var(--blue);
+    color: var(--dark) !important;
+}
+
+.navbar-toggler {
+    border: none;
+    padding: 6px 8px;
+}
+
+.navbar-toggler:focus {
+    box-shadow: none;
+}
+
+
+/* =========================
+   LOGIN BUTTON
+   ========================= */
+
+.btn-login {
+    background: var(--peach);
+    color: var(--dark);
+    border: none;
+    padding: 9px 18px;
+    border-radius: 12px;
+    font-weight: 600;
+    transition: 0.3s ease;
+}
+
+.btn-login:hover {
+    background: var(--pink);
+    color: var(--dark);
+    transform: translateY(-2px);
+    box-shadow: 0 7px 18px rgba(214, 168, 184, 0.25);
+}
+
+
+/* =========================
+   HERO
+   ========================= */
+
+.hero {
+    min-height: 680px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 10% 20%, rgba(209, 233, 246, 0.85), transparent 28%),
+        radial-gradient(circle at 90% 20%, rgba(238, 202, 213, 0.75), transparent 28%),
+        linear-gradient(
+            135deg,
+            var(--cream) 0%,
+            #fffaf0 45%,
+            var(--blue) 100%
+        );
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    width: 280px;
+    height: 280px;
+    background: var(--pink);
+    opacity: 0.35;
+    border-radius: 50%;
+    right: -90px;
+    bottom: -100px;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 180px;
+    height: 180px;
+    background: var(--peach);
+    opacity: 0.45;
+    border-radius: 50%;
+    left: -60px;
+    top: 80px;
+}
+
+.hero .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content {
+    padding: 60px 0;
+}
+
+.hero-small {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.7);
+    color: var(--dark);
+    padding: 8px 16px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 18px;
+    box-shadow: 0 4px 15px rgba(90, 85, 82, 0.05);
+}
+
+.hero h1 {
+    font-size: 55px;
+    line-height: 1.15;
+    font-weight: 750;
+    color: var(--dark);
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color:#7bbfda;
+}
+
+.hero p {
+    max-width: 570px;
+    font-size: 17px;
+    color: var(--text);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+
+/* =========================
+   HERO BUTTONS
+   ========================= */
+
+.btn-main {
+    display: inline-block;
+    background: var(--peach);
+    color: var(--dark);
+    padding: 12px 24px;
+    border-radius: 13px;
+    font-weight: 600;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+}
+
+.btn-main:hover {
+    background: var(--pink);
+    color: var(--dark);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(214, 168, 184, 0.25);
+}
+
+.btn-outline {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.65);
+    color: var(--dark);
+    padding: 10px 22px;
+    border-radius: 13px;
+    font-weight: 600;
+    border: 2px solid var(--blue-dark);
+    transition: 0.3s ease;
+}
+
+.btn-outline:hover {
+    background: var(--blue);
+    color: var(--dark);
+    transform: translateY(-3px);
+}
+
+
+/* =========================
+   HERO CARD
+   ========================= */
+
+.hero-card {
+    background: rgba(255, 255, 255, 0.82);
+    border-radius: 28px;
+    padding: 35px;
+    box-shadow: 0 20px 50px rgba(90, 85, 82, 0.12);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.7);
+}
+
+.hero-card-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--blue);
+    border-radius: 20px;
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.hero-card h3 {
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.hero-card p {
+    font-size: 15px;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   GENERAL SECTION
+   ========================= */
+
+.section {
+    padding: 90px 0;
+}
+
+.section-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.section-title .small-title {
+    display: inline-block;
+    background: var(--cream);
+    color: var(--dark);
+    padding: 6px 15px;
+    border-radius: 30px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.section-title h2 {
+    color: var(--dark);
+    font-size: 35px;
+    font-weight: 750;
+    margin-bottom: 12px;
+}
+
+.section-title p {
+    max-width: 650px;
+    margin: auto;
+    color: var(--text);
+}
+
+
+/* =========================
+   ABOUT
+   ========================= */
+
+.about {
+    background: var(--white);
+}
+
+.about-box {
+    background: var(--blue);
+    border-radius: 25px;
+    padding: 35px;
+    height: 100%;
+}
+
+.about-box h3 {
+    color: var(--dark);
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.about-box p {
+    margin-bottom: 0;
+}
+
+.about-info {
+    padding: 10px 0 10px 25px;
+}
+
+.about-info h4 {
+    color: var(--dark);
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.about-info p {
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   SERVICES
+   ========================= */
+
+.services {
+    background: #FFF9F5;
+}
+
+.service-card {
+    background: var(--white);
+    border: none;
+    border-radius: 22px;
+    padding: 30px 25px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(90, 85, 82, 0.07);
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 35px rgba(90, 85, 82, 0.12);
+}
+
+.service-icon {
+    width: 65px;
+    height: 65px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.service-card:nth-child(1) .service-icon {
+    background: var(--blue);
+}
+
+.service-card:nth-child(2) .service-icon {
+    background: var(--peach);
+}
+
+.service-card:nth-child(3) .service-icon {
+    background: var(--pink);
+}
+
+.service-card:nth-child(4) .service-icon {
+    background: var(--cream);
+}
+
+.service-card h4 {
+    color: var(--dark);
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.service-card p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   PRICE
+   ========================= */
+
+.price-section {
+    background: var(--cream);
+}
+
+.price-card {
+    background: var(--white);
+    border-radius: 23px;
+    padding: 30px;
+    height: 100%;
+    box-shadow: 0 8px 25px rgba(90, 85, 82, 0.07);
+    transition: 0.3s ease;
+}
+
+.price-card:hover {
+    transform: translateY(-5px);
+}
+
+.price-card h4 {
+    color: var(--dark);
+    font-size: 21px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.price {
+    font-size: 32px;
+    font-weight: 750;
+    color: #7bbfda;
+    margin-bottom: 5px;
+}
+
+.price span {
+    font-size: 14px;
+    color: var(--text);
+    font-weight: 400;
+}
+
+.price-card p {
+    font-size: 14px;
+    margin-bottom: 0;
+}
+
+
+/* =========================
+   WHY US
+   ========================= */
+
+.why-us {
+    background: var(--white);
+}
+
+.why-item {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 28px;
+}
+
+.why-icon {
+    min-width: 55px;
+    width: 55px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 16px;
+    background: var(--pink);
+    font-size: 23px;
+}
+
+.why-item h4 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.why-item p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =========================
+   STEPS
+   ========================= */
+
+.steps-section {
+    background: var(--blue);
+}
+
+.step-card {
+    text-align: center;
+    padding: 20px;
+}
+
+.step-number {
+    width: 58px;
+    height: 58px;
+    margin: 0 auto 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--white);
+    color: var(--dark);
+    border-radius: 50%;
+    font-size: 20px;
+    font-weight: 750;
+    box-shadow: 0 5px 15px rgba(90, 85, 82, 0.08);
+}
+
+.step-card h4 {
+    color: var(--dark);
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.step-card p {
+    font-size: 14px;
+    margin: 0;
+}
+
+
+/* =========================
+   CTA
+   ========================= */
+
+.cta {
+    padding: 80px 0;
+    background:
+        linear-gradient(
+            135deg,
+            var(--peach),
+            var(--pink)
+        );
+}
+
+.cta-box {
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+}
+
+.cta h2 {
+    color: var(--dark);
+    font-size: 36px;
+    font-weight: 750;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    color: var(--text);
+    margin-bottom: 25px;
+}
+
+.cta .btn-main {
+    background: var(--white);
+}
+
+.cta .btn-main:hover {
+    background: var(--cream);
+}
+
+
+/* =========================
+   FOOTER
+   ========================= */
+
+footer {
+    background: #ffffff;
+    padding: 45px 0 20px;
+    border-top: 1px solid rgba(90, 85, 82, 0.07);
+}
+
+.footer-brand {
+    font-size: 22px;
+    font-weight: 750;
+    color: var(--dark);
+    margin-bottom: 10px;
+}
+
+footer p {
+    font-size: 14px;
+    color: var(--text);
+}
+
+.footer-title {
+    font-size: 16px;
+    font-weight: 700;
+    color: var(--dark);
+    margin-bottom: 15px;
+}
+
+.footer-link {
+    display: block;
+    color: var(--text);
+    font-size: 14px;
+    margin-bottom: 7px;
+    transition: 0.2s ease;
+}
+
+.footer-link:hover {
+    color: #497ee2;
+    padding-left: 3px;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(90, 85, 82, 0.08);
+    margin-top: 30px;
+    padding-top: 18px;
+    text-align: center;
+    font-size: 13px;
+}
+
+
+/* =========================
+   LOGIN MODAL
+   ========================= */
+
+.modal-content {
+    border: none;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 20px 60px rgba(90, 85, 82, 0.2);
+}
+
+.modal-header {
+    background: var(--blue);
+    border: none;
+    padding: 22px 25px;
+}
+
+.modal-title {
+    color: var(--dark);
+    font-weight: 700;
+}
+
+.modal-body {
+    padding: 30px;
+    background: var(--white);
+}
+
+.modal-footer {
+    border: none;
+    background: var(--white);
+    padding: 0 30px 25px;
+}
+
+.form-label {
+    color: var(--dark);
+    font-weight: 600;
+    font-size: 14px;
+}
+
+.form-control {
+    border: 1px solid #E4DCD8;
+    border-radius: 11px;
+    padding: 11px 14px;
+    color: var(--text);
+}
+
+.form-control:focus {
+    border-color: var(--blue-dark);
+    box-shadow: 0 0 0 3px rgba(209, 233, 246, 0.45);
+}
+
+.btn-login-modal {
+    width: 100%;
+    background: var(--peach);
+    color: var(--dark);
+    border: none;
+    border-radius: 11px;
+    padding: 11px;
+    font-weight: 650;
+    transition: 0.3s ease;
+}
+
+.btn-login-modal:hover {
+    background: var(--pink);
+    color: var(--dark);
+}
+
+
+/* =========================
+   ALERT
+   ========================= */
+
+.alert {
+    border: none;
+    border-radius: 12px;
+}
+
+.alert-danger {
+    background: var(--peach);
+    color: #9b7774;
+}
+
+.alert-success {
+    background: var(--blue);
+    color: #6f95aa;
+}
+
+
+/* =========================
+   BADGE
+   ========================= */
+
+.badge-soft-blue {
+    background: var(--blue);
+    color: var(--dark);
+}
+
+.badge-soft-cream {
+    background: var(--cream);
+    color: var(--dark);
+}
+
+.badge-soft-peach {
+    background: var(--peach);
+    color: var(--dark);
+}
+
+.badge-soft-pink {
+    background: var(--pink);
+    color: var(--dark);
+}
+
+
+/* =========================
+   RESPONSIVE
+   ========================= */
+
+@media (max-width: 991px) {
+
+    .navbar .nav-link {
+        margin: 3px 0;
+    }
+
+    .navbar .btn-login {
+        display: inline-block;
+        margin-top: 8px;
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 70px 0;
+    }
+
+    .hero h1 {
+        font-size: 44px;
+    }
+
+    .hero-card {
+        margin-top: 35px;
+    }
+
+    .section {
+        padding: 70px 0;
+    }
+}
+
+
+@media (max-width: 767px) {
+
+    .hero {
+        padding: 60px 0;
+    }
+
+    .hero-content {
+        padding: 20px 0;
+    }
+
+    .hero h1 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 15px;
+    }
+
+    .section {
+        padding: 60px 0;
+    }
+
+    .section-title {
+        margin-bottom: 35px;
+    }
+
+    .section-title h2 {
+        font-size: 29px;
+    }
+
+    .about-info {
+        padding: 25px 0 0;
+    }
+
+    .cta {
+        padding: 60px 20px;
+    }
+
+    .cta h2 {
+        font-size: 29px;
+    }
+}
+
+
+@media (max-width: 480px) {
+
+    .navbar-brand {
+        font-size: 20px;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .hero-small {
+        font-size: 12px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+    }
+
+    .btn-main,
+    .btn-outline {
+        width: 100%;
+        text-align: center;
+    }
+
+    .hero-card {
+        padding: 25px;
+    }
+
+    .section-title h2 {
+        font-size: 26px;
+    }
+
+    .service-card,
+    .price-card {
+        padding: 25px 20px;
+    }
+}
